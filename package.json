@@ -1,0 +1,15 @@
+{
+  "name": "memoteca",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para estudos de requisições HTTP e a criação de um CRUD (Create, Read, Update and Delete).",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch ./backend/db.json --port 3000"
+  },
+  "keywords": [],
+  "author": "Felipe Souza",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
