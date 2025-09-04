@@ -1,15 +1,22 @@
 import api from "./backend/api.js";
 
 const interfaceDoUser = {
-    async renderizar() {
+    async renderizar(pensamentosFiltrados = null) {
         const lista = document.getElementById('lista-pensamentos');
         const mensagemVazia = document.getElementById("mensagem-vazia");
         lista.innerHTML = "";
 
         try {
-            const pensamentos = await api.buscar()
-            pensamentos.forEach(interfaceDoUser.criar);
-            if (pensamentos.length === 0) {
+            let pensamentosParaRenderizar 
+
+            if(pensamentosFiltrados) {
+                pensamentosParaRenderizar = pensamentosFiltrados
+            } else {
+                pensamentosParaRenderizar = await api.buscar()
+            }
+
+            pensamentosParaRenderizar.forEach(interfaceDoUser.criar);
+            if (pensamentosParaRenderizar.length === 0) {
                 mensagemVazia.style.display = "block";
             } else {
                 mensagemVazia.style.display = "none";
@@ -38,8 +45,13 @@ const interfaceDoUser = {
         pensamentoAutoria.textContent = pensamento.autoria;
         pensamentoAutoria.classList.add("pensamento-autoria");
 
+        const pensamentoData = document.createElement("div");
+        const dataFormatada = pensamento.data.toLocaleDateString('pt-BR')
+        pensamentoData.textContent = dataFormatada;
+        pensamentoData.classList.add("pensamento-data");
+
         const botaoEditar = document.createElement("button");
-        botaoEditar.classList.add("botaõ-editar");
+        botaoEditar.classList.add("botao-editar");
         botaoEditar.onclick = () => {
             interfaceDoUser.preencherFormulario(pensamento.id)
         }
@@ -65,14 +77,33 @@ const interfaceDoUser = {
         iconeExcluir.alt = "Excluir";
         botaoExcluir.appendChild(iconeExcluir);
 
+        const botaoFavorito = document.createElement("button");
+        botaoFavorito.classList.add("botao-favorito");
+        botaoFavorito.onclick = async () => {
+            try {
+                await api.atualizarFavoritos(pensamento.id, !pensamento.favorito)
+                interfaceDoUser.renderizar()
+            } catch (error) {
+                alert("Erro ao atualizar favoritos")
+            }
+        }
+
+        const iconeFavorito = document.createElement("img");
+        iconeFavorito.src = pensamento.favorito ? "assets/imagens/icone-favorito.png" : "assets/imagens/icone-favorito_outline.png"
+        iconeFavorito.alt = "icone de favorito";
+        botaoFavorito.appendChild(iconeFavorito);
+
         const icones = document.createElement("div");
         icones.classList.add("icones");
+        icones.appendChild(botaoFavorito)
         icones.appendChild(botaoEditar);
         icones.appendChild(botaoExcluir);
 
         li.appendChild(aspas);
         li.appendChild(pensamentoConteudo);
         li.appendChild(pensamentoAutoria);
+        li.appendChild(pensamentoData);
+        
         li.appendChild(icones)
 
         listaPensamentos.appendChild(li)
@@ -88,6 +119,8 @@ const interfaceDoUser = {
         document.getElementById("pensamento-id").value = pensamento.id;
         document.getElementById("pensamento-conteudo").value = pensamento.conteudo;
         document.getElementById("pensamento-autoria").value = pensamento.autoria;
+        document.getElementById("pensamento-data").value = pensamento.data.toISOString().split("T")[0];
+        document.getElementById("form-container").scrollIntoView()
     }
 }
 

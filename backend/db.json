@@ -2,58 +2,129 @@
   "pensamentos": [
     {
       "id": "2a56",
-      "conteudo": "Vc faz TI? Conserta meu celular!",
-      "autoria": "Grupo da família"
-    },
-    {
-      "id": "4c7d",
-      "conteudo": "Da vida reclama, mas sem ela não vive!w",
-      "autoria": "Mestre Yoda"
+      "favorito": true,
+      "conteudo": "Vc faz TI? Conserta meu celular e meu microondas!",
+      "autoria": "Grupo da família",
+      "data": "2025-08-01"
     },
     {
       "id": "5b8a",
+      "favorito": false,
       "conteudo": "Na minha máquina funciona!",
-      "autoria": "Dev"
+      "autoria": "Dev",
+      "data": "2025-08-02"
     },
     {
       "id": "68uy",
+      "favorito": false,
       "conteudo": "Esse é de laranja que parece de limão, mas tem gosto de tamarindo!",
-      "autoria": "Chaves"
+      "autoria": "Chaves",
+      "data": "2025-08-03"
     },
     {
       "id": "b807",
+      "favorito": false,
       "conteudo": "Melhor professor, o fracasso é!",
-      "autoria": "Mestre Yoda"
+      "autoria": "Mestre Yoda",
+      "data": "2025-08-04"
     },
     {
       "id": "9f3c",
+      "favorito": false,
       "conteudo": "Você não é todo mundo!",
-      "autoria": "Mãe"
+      "autoria": "Mãe",
+      "data": "2025-08-05"
     },
     {
       "id": "6a2b",
-      "conteudo": "Foi sem querer querendo!",
-      "autoria": "Chaves"
+      "favorito": false,
+      "conteudo": "Foi sem querer querendo!!",
+      "autoria": "Chaves",
+      "data": "2025-08-06"
     },
     {
       "id": "7e2a",
+      "favorito": false,
       "conteudo": "Que a força esteja com você!",
-      "autoria": "Mestre Yoda"
+      "autoria": "Mestre Yoda",
+      "data": "2025-08-07"
     },
     {
       "id": "5c8f",
+      "favorito": false,
       "conteudo": "Resolver o bug não consegue? Esfriar a cabeça vc deve.",
-      "autoria": "Mestre Yoda"
+      "autoria": "Mestre Yoda",
+      "data": "2025-07-08"
     },
     {
       "id": "2d6e",
+      "favorito": false,
       "conteudo": "Não faça drama, faça café! :)",
-      "autoria": "Dev"
+      "autoria": "Dev",
+      "data": "2025-01-09"
     },
     {
-      "id": "3f1a",
-      "conteudo": "Conserta minha impressora?",
-      "autoria": "Grupo da família"
+      "id": "110c",
+      "favorito": false,
+      "conteudo": "Never Say never",
+      "autoria": "Justin Bieber",
+      "data": "2023-09-10"
+    },
+    {
+      "id": "1df1",
+      "favorito": false,
+      "conteudo": "Wake Wake",
+      "autoria": "Ganley",
+      "data": "2025-02-11"
+    },
+    {
+      "id": "6a74",
+      "favorito": false,
+      "conteudo": "All day neguin",
+      "autoria": "Jorlan",
+      "data": "2025-04-12"
+    },
+    {
+      "id": "babf",
+      "favorito": false,
+      "conteudo": "asd",
+      "autoria": "asd",
+      "data": "2024-08-23"
+    },
+    {
+      "id": "10fb",
+      "favorito": false,
+      "conteudo": "asdas",
+      "autoria": "asdad",
+      "data": "2024-08-09"
+    },
+    {
+      "id": "25a8",
+      "favorito": false,
+      "conteudo": "Mais 5",
+      "autoria": "mestre yohan",
+      "data": "2025-08-15"
+    },
+    {
+      "id": "5846",
+      "favorito": false,
+      "conteudo": "Mais 5",
+      "autoria": "Mestre Yohan",
+      "data": "2025-08-07"
+    },
+    {
+      "id": "d79b",
+      "favorito": false,
+      "conteudo": "Olhou sorriu...",
+      "autoria": "Mr. Catra",
+      "data": "2025-10-01T00:00:00.000Z"
+    },
+    {
+      "id": "5c22",
+      "favorito": false,
+      "conteudo": "ddadadadadadada",
+      "autoria": "dadad",
+      "data": "2025-09-02T00:00:00.000Z"
     }
   ]
 }

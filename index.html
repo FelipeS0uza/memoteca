@@ -31,12 +31,13 @@
       <form id="pensamento-form">
         <input type="hidden" id="pensamento-id" />
         <label for="pensamento-conteudo">Pensamento</label>
-        <textarea id="pensamento-conteudo" placeholder="Digite seu pensamento" required>
-          </textarea>
+        <textarea id="pensamento-conteudo" placeholder="Digite seu pensamento" required></textarea>
         <label for="pensamento-autoria">
           Autoria ou Fonte
         </label>
         <input type="text" id="pensamento-autoria" placeholder="Insira a autoria ou fonte" required />
+        <label for="pensamento-data">Data</label>
+        <input type="date" id="pensamento-data" required>
         <div class="form-botoes">
           <button type="submit" id="botao-salvar">
             Adicionar
@@ -50,6 +51,11 @@
     <span></span>
     <section id="lista-pensamentos-container">
       <h3>Meu Mural</h3>
+      <section id="busca-container" class="mensagem-vazia">
+        <input type="text" id="campo-busca" placeholder="O que você procura ?">
+        <img src="assets/imagens/lupa.png" class="lupa">
+
+      </section>
       <div id="mensagem-vazia" class="mensagem-vazia">
         <img src="assets/imagens/lista-vazia.png" alt="Nenhum pensamento disponível">
         <p>Nada por aqui ainda, que tal compartilhar alguma ideia?</p>
